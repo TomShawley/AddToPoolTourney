@@ -34,7 +34,7 @@ public class PoolRest {
     private JmsTemplate jmsTemplate;
     
     @PostMapping("${path.addAccount}")
-    public Tourney addAccount(@RequestBody Tourney tourney, @PathVariable Long accountid) {
+    public Tourney addAccount(@RequestBody Tourney tourney, @PathVariable Long tourneyid, @PathVariable Long accountid) {
         
     	return service.addAccount(tourney, accountid);
     }
